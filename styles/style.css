@@ -79,7 +79,7 @@
   left: -50px;
   width: 28px;
   height: 28px;
-  background-image: url("../../../images/sun.svg");
+  background-image: url("../images/sun.svg");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -91,7 +91,7 @@
   right: -42px;
   width: 20px;
   height: 20px;
-  background-image: url("../../../images/moon.svg");
+  background-image: url("../images/moon.svg");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -149,7 +149,7 @@
   width: 24px;
   height: 24px;
   background-color: #ebebeb;
-  background-image: url(../../../images/previous-btn.svg);
+  background-image: url(../images/previous-btn.svg);
   background-size: 4.5px 10px;
   background-position: center;
   background-repeat: no-repeat;
@@ -166,7 +166,7 @@
   width: 24px;
   height: 24px;
   background-color: #ebebeb;
-  background-image: url(../../../images/next-btn.svg);
+  background-image: url(../images/next-btn.svg);
   background-size: 5px 10px;
   background-position: center;
   background-repeat: no-repeat;
@@ -403,7 +403,7 @@
   width: 254px;
   height: 348px;
   margin-left: 30px;
-  background-image: url(../../../images/forest-road-1.jpg);
+  background-image: url(../images/forest-road-1.jpg);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -430,7 +430,7 @@
   background-color: #f4f4f4;
   border-radius: 20px;
   box-shadow: -20px 60px 220px rgba(0, 0, 0, 0.44);
-  background-image: url(../../../images/bike-model-cannondale-systemsix-himod.jpg);
+  background-image: url(../images/bike-model-cannondale-systemsix-himod.jpg);
   background-size: 180px;
   background-position: center;
   background-repeat: no-repeat;
@@ -679,13 +679,13 @@
   position: relative;
 }
 .trail-type__image-list_type_highway::after {
-  background-image: url(../../../images/trail-type-highway.svg);
+  background-image: url(../images/trail-type-highway.svg);
 }
 .trail-type__image-list_type_gravel::after {
-  background-image: url(../../../images/trail-type-gravel.svg);
+  background-image: url(../images/trail-type-gravel.svg);
 }
 .trail-type__image-list_type_tt::after {
-  background-image: url(../../../images/trail-type-tt.svg);
+  background-image: url(../images/trail-type-tt.svg);
 }
 @media (min-width: 768px) {
   .trail-type__image-list {
