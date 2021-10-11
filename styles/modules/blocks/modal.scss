@@ -1,0 +1,69 @@
+@use "sass:map";
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s linear;
+  z-index: 200;
+
+  &_type {
+    &_menu {
+      background-color: #f4f4f4;
+    }
+  }
+
+  &_opened {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &__wrapper {
+    width: 100%;
+    padding-top: 74px;
+    padding-bottom: 38px;
+    display: grid;
+    align-items: flex-start;
+    justify-items: center;
+    justify-content: center;
+    grid-template-rows: 1fr min-content;
+    position: relative;
+  }
+
+  &__close {
+    position: absolute;
+    top: 27px;
+    right: 20px;
+  }
+
+  &__menu-list {
+    padding-top: 70px;
+    @include flex($direction: column, $align: center, $justify: center);
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  &__menu-list-item {
+    margin-bottom: 32px;
+  }
+
+  &__menu-list-item:last-of-type {
+    margin-bottom: 0;
+  }
+
+  &__link {
+    font-weight: map.get($font-weights, "medium");
+    font-size: 18px;
+    line-height: 1;
+  }
+
+  &__link:hover {
+    opacity: 0.75;
+  }
+}

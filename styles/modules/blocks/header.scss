@@ -1,0 +1,67 @@
+@use "sass:map";
+
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #f4f4f4;
+  z-index: 100;
+
+  &__container {
+    max-width: 284px;
+    margin: 0 auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    @include flex($direction: row, $align: flex-start, $justify: flex-end);
+
+    @include tabletStyles {
+      max-width: 768px;
+    }
+
+    @include desctopStyles {
+      max-width: 1200px;
+      padding-top: 28px;
+      padding-bottom: 28px;
+    }
+  }
+
+  &__menu-button {
+    @include tabletStyles {
+      display: none;
+    }
+  }
+
+  &__menu {
+    display: none;
+
+    @include tabletStyles {
+      display: block;
+    }
+  }
+
+  &__menu-list {
+    @include flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  &__menu-list-item {
+    margin-right: 34px;
+  }
+
+  &__menu-list-item:last-of-type {
+    margin-right: 0;
+  }
+
+  &__link {
+    font-weight: map.get($font-weights, "medium");
+    font-size: 14px;
+    line-height: 1.29;
+  }
+
+  &__link:hover {
+    opacity: 0.75;
+  }
+}

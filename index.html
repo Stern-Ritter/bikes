@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Сайт 'Велосипеды'" />
+    <meta name="keywords" content="HTML5, CSS, JavaScript" />
+    <meta name="author" content="Константин Фадеев" />
+    <title>Велосипеды</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  </head>
+  <body class="page">
+    <header class="header">
+      <div class="header__container">
+        <button
+          type="button"
+          class="header__menu-button button button_type_menu"
+        ></button>
+        <nav class="header__menu">
+          <ul class="header__menu-list">
+            <li class="header__menu-list-item">
+              <a href="#trail-types" class="header__link link"
+                >Покрытия и градиенты</a
+              >
+            </li>
+            <li class="header__menu-list-item">
+              <a href="#bikes" class="header__link link">Велосипеды</a>
+            </li>
+            <li class="header__menu-list-item">
+              <a href="#training" class="header__link link">Тренировки</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="content">
+      <section class="lead page__section">
+        <h1 class="lead__title headline">Шоссе, ТТ и&nbsp;Грэвел</h1>
+        <div class="lead__image">
+          <div class="lead__bike-pic"></div>
+        </div>
+        <p class="lead__text text text_type_main text_muted">
+          Триатлонные старты, горные серпантины или грейвел заезды
+          по&nbsp;живописным маршрутам&nbsp;&mdash; нужно только определиться
+          с&nbsp;выбором велосипеда и&nbsp;отправиться в&nbsp;путь.
+        </p>
+        <a href="#" class="lead__link link link_type_learn-more">Подробнее</a>
+        <p class="lead__bike-pic-description text">Cannondale Systemsix</p>
+      </section>
+
+      <section class="intro page__section">
+        <img
+          src="./images/mountain-highway-1.jpg"
+          alt="Шоссе в горах"
+          class="intro__image"
+        />
+        <p class="intro__quote text">
+          &laquo;Катайся много или мало, долго или коротко, как
+          хочешь&nbsp;&mdash; но&nbsp;катайся&raquo;
+        </p>
+        <p class="intro__quote-description">
+          <span class="intro__quote-author text">Эдди Меркс</span>
+          <span class="intro__quote-author-subline text text_muted"
+            >Велогонщик</span
+          >
+        </p>
+      </section>
+
+      <section id="trail-types" class="trail-types page__section">
+        <div class="trail-types__buttons-group">
+          <button
+            type="button"
+            class="trail-types__button button button_type_previous"
+          ></button>
+          <button
+            type="button"
+            class="trail-types__button button button_type_next"
+          ></button>
+        </div>
+        <ul class="trail-types__list swiper-wrapper">
+          <li class="trail-types__list-item swiper-slide">
+            <article class="trail-type">
+              <h2 class="trail-type__title headline">Шоссе</h2>
+              <ul
+                class="
+                  trail-type__image-list trail-type__image-list_type_highway
+                "
+              >
+                <li class="trail-type__image-list-item">
+                  <img
+                    src="./images/mountain-highway-2.jpg"
+                    alt="Шоссе в горах"
+                    class="trail-type__image"
+                  />
+                </li>
+                <li class="trail-type__image-list-item">
+                  <img
+                    src="./images/forest-road-2.jpg"
+                    alt="Трасса в лесу"
+                    class="trail-type__image"
+                  />
+                </li>
+              </ul>
+              <p class="trail-type__text text text_type_main text_muted">
+                На&nbsp;шоссейном велосипеде можно ездить по асфальту
+                на&nbsp;разных градиентах: будь&nbsp;то горы или равнины. Гонки
+                проходят в&nbsp;командном пелотоне, но&nbsp;тренироваться можно
+                и&nbsp;самостоятельно.
+              </p>
+            </article>
+          </li>
+          <li class="trail-types__list-item swiper-slide">
+            <article class="trail-type">
+              <h2 class="trail-type__title headline">Грэвел</h2>
+              <ul
+                class="
+                  trail-type__image-list trail-type__image-list_type_gravel
+                "
+              >
+                <li class="trail-type__image-list-item">
+                  <img
+                    src="./images/forest-road-2.jpg"
+                    alt="Трасса в лесу"
+                    class="trail-type__image"
+                  />
+                </li>
+                <li class="trail-type__image-list-item">
+                  <img
+                    src="./images/highway.jpg"
+                    alt="Шоссе"
+                    class="trail-type__image"
+                  />
+                </li>
+              </ul>
+              <p class="trail-type__text text text_type_main text_muted">
+                Грэвел похож на&nbsp;шоссейный велосипед, но&nbsp;конструкция
+                рамы немного отличается, и&nbsp;на&nbsp;нём стоят более широкие
+                покрышки, всё для того чтобы проехать по&nbsp;лёгкому
+                бездорожью.
+              </p>
+            </article>
+          </li>
+          <li class="trail-types__list-item swiper-slide">
+            <article class="trail-type">
+              <h2 class="trail-type__title headline">ТТ</h2>
+              <ul class="trail-type__image-list trail-type__image-list_type_tt">
+                <li class="trail-type__image-list-item">
+                  <img
+                    src="./images/highway.jpg"
+                    alt="Шоссе"
+                    class="trail-type__image"
+                  />
+                </li>
+                <li class="trail-type__image-list-item">
+                  <img
+                    src="./images/mountain-highway-2.jpg"
+                    alt="Шоссе в горах"
+                    class="trail-type__image"
+                  />
+                </li>
+              </ul>
+              <p class="trail-type__text text text_type_main text_muted">
+                ТТ&nbsp;&mdash; это велосипед для триатлона или раздельного
+                старта, гооняют на&nbsp;таком велике только по&nbsp;равнинному
+                асфальту, велик очень быстрые и&nbsp;аэродинамичный.
+              </p>
+            </article>
+          </li>
+        </ul>
+      </section>
+
+      <section id="bikes" class="bikes page__section">
+        <h2 class="bikes__title headline">Велосипеды</h2>
+        <select
+          class="bikes__selector text"
+          name="bikes-type-selector"
+        ></select>
+        <div class="bikes__button-group"></div>
+        <div class="bikes__container">
+          <ul class="bikes__list swiper-wrapper"></ul>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+
+      <section id="training" class="training">
+        <h2 class="training__title headline">Тренировки</h2>
+        <img
+          src="./images/forest-highway.jpg"
+          alt="Шоссе в лесу"
+          class="training__image"
+        />
+        <p class="training__text text text_type_main text_muted">
+          Чтобы найти маршрут для тренировки можно воспользоваться сервисом
+          Komoot, а&nbsp;записать эти тренировки поможет приложение Strava,
+          а&nbsp;также это приложение позволит построить тренировочный план.
+        </p>
+        <ul class="training__links">
+          <li class="training__links-item">
+            <a
+              class="training__link link"
+              href="https://www.strava.com"
+              target="_blank"
+              >Strava</a
+            >
+          </li>
+          <li class="training__links-item">
+            <a
+              class="training__link link"
+              href="https://www.komoot.com"
+              target="_blank"
+              >Komoot</a
+            >
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <section class="subscription">
+      <div class="subscription__container">
+        <h3 class="subscription__title text">
+          Подпишитесь&nbsp;на рассылку &mdash;
+        </h3>
+        <form
+          name="user-subscription-form"
+          action="#"
+          method="post"
+          autocomplete="off"
+          class="subscription__form"
+        >
+          <input
+            class="subscription__input text"
+            type="email"
+            name="user-email"
+            placeholder="Ваш e-mail"
+          />
+          <input
+            class="subscription__accept-btn button text"
+            type="submit"
+            value="ok"
+            title="Подписаться"
+          />
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer__container">
+        <p class="footer__copyright text">&copy;&nbsp;Road Club 2021</p>
+        <img
+          src="./images/logo.svg"
+          alt="Логотип 'Road Club'"
+          class="footer__logo logo"
+        />
+        <label class="footer__switch switch">
+          <input type="checkbox" class="switch__input" />
+          <span class="switch__slider"></span>
+        </label>
+      </div>
+    </footer>
+
+    <div class="modal modal_type_menu">
+      <div class="modal__wrapper">
+        <button
+          class="modal__close button button_type_close"
+          type="button"
+          title="Закрыть"
+        ></button>
+        <nav class="modal__menu">
+          <ul class="modal__menu-list">
+            <li class="modal__menu-list-item">
+              <a href="#trail-types" class="modal__link link" target="_top"
+                >Покрытия и градиенты</a
+              >
+            </li>
+            <li class="modal__menu-list-item">
+              <a href="#bikes" class="modal__link link">Велосипеды</a>
+            </li>
+            <li class="modal__menu-list-item">
+              <a href="#training" class="modal__link link">Тренировки</a>
+            </li>
+          </ul>
+        </nav>
+        <label class="modal__switch switch">
+          <input type="checkbox" class="switch__input" />
+          <span class="switch__slider"></span>
+        </label>
+      </div>
+    </div>
+
+    <template id="bikes-item">
+      <li class="bikes__list-item swiper-slide">
+        <figure class="bikes__image-holder">
+          <a href="#" class="bikes__link link" target="_blank">
+            <img class="bikes__image" />
+          </a>
+          <figcaption class="bikes__image-caption text"></figcaption>
+        </figure>
+      </li>
+    </template>
+
+    <script src="./index.js"></script>
+  </body>
+</html>

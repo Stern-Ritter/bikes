@@ -1,0 +1,20 @@
+.page {
+  min-width: 320px;
+  background-color: #f4f4f4;
+  font-family: "Inter", "Arial", sans-serif;
+  /* Сглаживание шрифта */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Подгонка размера текста */
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+
+  &__section {
+    border-bottom: 1px solid #E3E3E3;
+
+    @include desctopStyles {
+      border-bottom: none;
+    } 
+  }
+}

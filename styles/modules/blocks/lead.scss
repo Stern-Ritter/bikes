@@ -1,0 +1,134 @@
+.lead {
+  max-width: 284px;
+  margin: 0 auto;
+  padding-top: 40px;
+  padding-bottom: 80px;
+  display: grid;
+  justify-items: flex-start;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 40px 100px;
+
+  @include tabletStyles {
+    max-width: 768px;
+    row-gap: 50px;
+  }
+
+  @include desctopStyles {
+    max-width: 1440px;
+    padding-top: 20px;
+    padding-bottom: 100px;
+    padding-left: 120px;
+    grid-template-rows: min-content min-content min-content 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "title image"
+      "text image"
+      "button image"
+      ". image";
+  }
+
+  &__title {
+    max-width: 460px;
+
+    @include desctopStyles {
+      padding-top: 60px;
+      grid-area: title;
+    }
+  }
+
+  &__image {
+    @include wh($w: 254px, $h: 348px);
+    margin-left: 30px;
+    background-image: url(../../../images/forest-road-1.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+
+    @include tabletStyles {
+      @include wh($w: 610px, $h: 836px);
+    }
+
+    @include desctopStyles {
+      margin-left: 0;
+      grid-area: image;
+    }
+  }
+
+  &__bike-pic {
+    @include wh($w: 234px, $h: 160px);
+    position: absolute;
+    top: 151px;
+    left: -30px;
+    background-color: #f4f4f4;
+    border-radius: 20px;
+    box-shadow: -20px 60px 220px rgba(0, 0, 0, 0.44);
+    background-image: url(../../../images/bike-model-cannondale-systemsix-himod.jpg);
+    background-size: 180px;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @include tabletStyles {
+      @include wh($w: 440px, $h: 300px);
+      top: 372px;
+      left: -80px;
+      background-size: 340px;
+    }
+
+    @include desctopStyles {
+      position: sticky;
+      top: 372px;
+      margin-top: 372px;
+      margin-bottom: 79px;
+      transform: translateX(-200px);
+    }
+  }
+
+  &__text {
+    max-width: 460px;
+
+    @include desctopStyles {
+      grid-area: text;
+    }
+  }
+
+  &__link {
+    min-width: 284px;
+    padding: 14px 62px;
+    border-radius: 4px;
+
+    @include desctopStyles {
+      min-width: 180px;
+      padding: 16px 10px;
+      grid-area: button;
+    }
+  }
+
+  &__bike-pic-description {
+    margin-top: 117px;
+    position: relative;
+    font-size: 18px;
+    line-height: 1;
+    display: none;
+
+    @include wideScreensStyles {
+      display: block;
+    }
+  }
+
+  &__bike-pic-description::after {
+    content: "";
+    position: absolute;
+    top: 9px;
+    right: -162px;
+    height: 2px;
+    width: 132px;
+    background-color: #d7d4d4;
+    display: none;
+
+    @include wideScreensStyles {
+      display: block;
+    }
+  }
+}

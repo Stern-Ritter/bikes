@@ -1,0 +1,121 @@
+.trail-type {
+  display: grid;
+  justify-items: flex-start;
+  align-items: flex-start;
+  justify-content: center;
+  row-gap: 40px;
+
+  @include tabletStyles {
+    grid-template-areas:
+      "title"
+      "text"
+      "images";
+    row-gap: 50px;
+  }
+
+  &__title {
+    max-width: 206px;
+
+    @include tabletStyles {
+      max-width: 460px;
+      grid-area: title;
+    }
+  }
+
+  &__image-list {
+    width: 100%;
+    @include flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    overflow: hidden;
+    position: relative;
+
+    &_type {
+      &_highway::after {
+        background-image: url(../../../images/trail-type-highway.svg);
+      }
+
+      &_gravel::after {
+        background-image: url(../../../images/trail-type-gravel.svg);
+      }
+
+      &_tt::after {
+        background-image: url(../../../images/trail-type-tt.svg);
+      }
+    }
+
+    @include tabletStyles {
+      padding-top: 30px;
+      grid-area: images;
+    }
+  }
+
+  &__image-list::before {
+    position: absolute;
+    content: "";
+    bottom: 14px;
+    left: 0;
+    @include wh($w: 70px, $h: 28px);
+    background-image: url(../../../images/trail-type-background.svg);
+    background-size: contain;
+    background-position: left center;
+    background-repeat: no-repeat;
+
+    @include tabletStyles {
+      @include wh($w: 100px, $h: 40px);
+      bottom: 16px;
+    }
+  }
+
+  &__image-list::after {
+    position: absolute;
+    content: "";
+    bottom: 22px;
+    left: 11px;
+    @include wh($w: 35px, $h: 12px);
+    background-size: contain;
+    background-position: left bottom;
+    background-repeat: no-repeat;
+
+    @include tabletStyles {
+      bottom: 28px;
+      left: 16px;
+      @include wh($w: 50px, $h: 16px);
+    }
+  }
+
+  &__image-list-item {
+    margin-right: 18px;
+    line-height: 0;
+
+    @include tabletStyles {
+      margin-right: 80px;
+    }
+
+    @include desctopStyles {
+      margin-right: 40px;
+    }
+  }
+
+  &__image-list-item:last-of-type {
+    margin-right: 0;
+  }
+
+  &__image {
+    max-width: 284px;
+    object-fit: contain;
+
+    @include tabletStyles {
+      max-width: 650px;
+    }
+  }
+
+  &__text {
+    max-width: 460px;
+
+    @include tabletStyles {
+      grid-area: text;
+    }
+  }
+}
