@@ -39,7 +39,7 @@
     &_previous {
       @include wh($w: 24px, $h: 24px);
       background-color: #ebebeb;
-      background-image: url(../../../images/previous-btn.svg);
+      background-image: url(../images/previous-btn.svg);
       background-size: 4.5px 10px;
       background-position: center;
       background-repeat: no-repeat;
@@ -54,7 +54,7 @@
     &_next {
       @include wh($w: 24px, $h: 24px);
       background-color: #ebebeb;
-      background-image: url(../../../images/next-btn.svg);
+      background-image: url(../images/next-btn.svg);
       background-size: 5px 10px;
       background-position: center;
       background-repeat: no-repeat;

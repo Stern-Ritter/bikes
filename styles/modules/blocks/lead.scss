@@ -40,7 +40,7 @@
   &__image {
     @include wh($w: 254px, $h: 348px);
     margin-left: 30px;
-    background-image: url(../../../images/forest-road-1.jpg);
+    background-image: url(../images/forest-road-1.jpg);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -64,7 +64,7 @@
     background-color: #f4f4f4;
     border-radius: 20px;
     box-shadow: -20px 60px 220px rgba(0, 0, 0, 0.44);
-    background-image: url(../../../images/bike-model-cannondale-systemsix-himod.jpg);
+    background-image: url(../images/bike-model-cannondale-systemsix-himod.jpg);
     background-size: 180px;
     background-position: center;
     background-repeat: no-repeat;

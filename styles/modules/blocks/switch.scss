@@ -8,7 +8,7 @@
     top: -2px;
     left: -50px;
     @include wh($w: 28px, $h: 28px);
-    background-image: url("../../../images/sun.svg");
+    background-image: url("../images/sun.svg");
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -20,7 +20,7 @@
     top: 2px;
     right: -42px;
     @include wh($w: 20px, $h: 20px);
-    background-image: url("../../../images/moon.svg");
+    background-image: url("../images/moon.svg");
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
