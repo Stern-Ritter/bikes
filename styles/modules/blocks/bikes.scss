@@ -1,27 +1,18 @@
 @use "sass:map";
 
 .bikes {
-  max-width: 284px;
-  min-height: 472px;
-  margin: 0 auto;
   padding-top: 40px;
-  padding-bottom: 80px;
+  padding-bottom: 74px;
   display: grid;
   row-gap: 20px;
   filter: drop-shadow(0px 20px 140px rgba(0, 0, 0, 0.06));
 
-  @include tabletStyles {
-    max-width: 380px;
-    min-height: 660px;
-  }
-
   @include desctopStyles {
-    max-width: 1200px;
-    min-height: 686px;
+    padding-bottom: 60px;
     grid-template-areas:
       "title buttons"
       "images images";
-      row-gap: 120px;
+    row-gap: 120px;
   }
 
   &__title {
@@ -39,7 +30,7 @@
     padding: 8px 42px 8px 12px;
     justify-self: flex-start;
     background-color: transparent;
-    border: 1px solid #e3e3e3;
+    border: 1px solid var(--bikes-select-border-color);
     border-radius: 2px;
     font-weight: map.get($font-weights, "semibold");
     font-size: 11px;
@@ -49,6 +40,10 @@
     @include desctopStyles {
       display: none;
     }
+  }
+
+  &__selector-option {
+    background-color: var(--bikes-option-background);
   }
 
   &__button-group {
@@ -67,7 +62,7 @@
     font-weight: map.get($font-weights, "regular");
     font-size: 18px;
     line-height: 1.56;
-    color: #222222;
+    color: var(--bikes-button-color);
     opacity: 0.7;
     cursor: pointer;
   }
@@ -85,11 +80,13 @@
   }
 
   &__input:checked + &__button {
-    color: #151515;
+    font-weight: map.get($font-weights, "semibold");
+    color: var(--bikes-selected-button-color);
     opacity: 1;
   }
 
   &__container {
+    padding-bottom: 30px;
     position: relative;
     overflow: hidden;
 
@@ -98,22 +95,18 @@
     }
   }
 
-  &__list {
-    padding: 0 0 30px 0;
-    margin: 0;
-    list-style: none;
-  }
-
   &__image-holder {
     max-width: 284px;
-    margin: 0;
     padding: 16px 0;
+    margin: 0;
     @include flex($direction: column, $align: center);
-    background-color: #f4f4f4;
+    background-color: var(--card-background);
     border-radius: 20px;
 
     @include tabletStyles {
       max-width: 380px;
+      padding: 0;
+      align-items: flex-start;
       background-color: transparent;
     }
   }
@@ -124,22 +117,25 @@
 
     @include tabletStyles {
       max-width: 340px;
-      margin-bottom: 42px;
-      background-color: #f4f4f4;
       padding: 20px;
+      margin-bottom: 20px;
+      background-color: var(--card-background);
       border-radius: 20px;
     }
+  }
 
-    &__image-caption {
-      font-weight: map.get($font-weights, "semibold");
-      font-size: 14px;
-      line-height: 1.29;
-      text-align: center;
+  &__image-caption {
+    font-weight: map.get($font-weights, "semibold");
+    font-size: 14px;
+    line-height: 1.29;
+    color: var(--card-description-inside-color);
+    text-align: center;
 
-      @include tabletStyles {
-        font-size: 18px;
-        line-height: 1.22;
-      }
+    @include tabletStyles {
+      padding-left: 6px;
+      font-size: 18px;
+      line-height: 1.22;
+      color: var(--card-description-outside-color);
     }
   }
 }

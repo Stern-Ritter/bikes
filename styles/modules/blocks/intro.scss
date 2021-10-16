@@ -1,8 +1,6 @@
 @use "sass:map";
 
 .intro {
-  max-width: 284px;
-  margin: 0 auto;
   padding-top: 20px;
   padding-bottom: 80px;
   display: grid;
@@ -11,12 +9,7 @@
   justify-content: center;
   gap: 40px 80px;
 
-  @include tabletStyles {
-    max-width: 768px;
-  }
-
   @include desctopStyles {
-    max-width: 1200px;
     grid-template-rows: 1fr min-content;
     grid-template-columns: 650px 470px;
     grid-template-areas:
@@ -52,6 +45,7 @@
   }
 
   &__quote-description {
+    margin: 0;
     @include desctopStyles {
       grid-area: description;
     }

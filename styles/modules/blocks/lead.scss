@@ -1,6 +1,4 @@
 .lead {
-  max-width: 284px;
-  margin: 0 auto;
   padding-top: 40px;
   padding-bottom: 80px;
   display: grid;
@@ -10,12 +8,10 @@
   gap: 40px 100px;
 
   @include tabletStyles {
-    max-width: 768px;
     row-gap: 50px;
   }
 
   @include desctopStyles {
-    max-width: 1440px;
     padding-top: 20px;
     padding-bottom: 100px;
     padding-left: 120px;
@@ -61,7 +57,7 @@
     position: absolute;
     top: 151px;
     left: -30px;
-    background-color: #f4f4f4;
+    background-color: var(--card-background);
     border-radius: 20px;
     box-shadow: -20px 60px 220px rgba(0, 0, 0, 0.44);
     background-image: url(../images/bike-model-cannondale-systemsix-himod.jpg);
@@ -124,7 +120,7 @@
     right: -162px;
     height: 2px;
     width: 132px;
-    background-color: #d7d4d4;
+    background-color: var(--card-description-line-color);
     display: none;
 
     @include wideScreensStyles {

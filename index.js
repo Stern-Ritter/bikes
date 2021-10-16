@@ -1,61 +1,70 @@
 // ** Данные для начальной иницализации
 // Данные для инициализации блока 'Велосипеды'
-const initialBikeCards = {
-  Шоссе: [
-    {
-      name: "Cervelo Caledonia-5",
-      src: "./images/bike-model-cervelo-caledonia-5.jpg",
-      link: "https://www.sigmasports.com/item/Cervelo/Caledonia-5-Ultegra-Disc-Road-Bike-2021/RDEN",
-    },
-    {
-      name: "Cannondale Systemsix Himod",
-      src: "./images/bike-model-cannondale-systemsix-himod.jpg",
-      link: "https://www.sigmasports.com/item/Cannondale/SystemSix-HiMOD-Ultegra-Di2-Disc-Road-Bike-2021/R82J",
-    },
-    ,
-    {
-      name: "Trek Domane SL-7",
-      src: "./images/bike-model-trek-domane-sl-7.jpg",
-      link: "https://www.sigmasports.com/item/Trek/Domane-SL-7-Force-eTap-AXS-Disc-Road-Bike-2021/RULF",
-    },
-  ],
-  Грэвел: [
-    {
-      name: "Cervelo Aspero GRX 810",
-      src: "./images/bike-model-cervelo-aspero-grx-810.jpg",
-      link: "https://www.sigmasports.com/item/Cervelo/Aspero-GRX-810-1x-Disc-Gravel-Bike-2021/RJDE",
-    },
-    {
-      name: "Specialized S-Works Diverge",
-      src: "./images/bike-model-specialized-s-works-diverge.jpg",
-      link: "https://www.sigmasports.com/item/Specialized/S-Works-Diverge-Gravel-Bike-2020/NVJ9",
-    },
-    ,
-    {
-      name: "Cannondale Topstone Lefty 3",
-      src: "./images/bike-model-cannondale-topstone -lefty-3.jpg",
-      link: "https://www.sigmasports.com/item/Cannondale/Topstone-Carbon-Lefty-3-Disc-Gravel-Road-Bike-2021/PUC8",
-    },
-  ],
-  ТТ: [
-    {
-      name: "Specialized S-Works Shiv",
-      src: "./images/bike-model-specialized-s-works-shiv.jpg",
-      link: "https://www.sigmasports.com/item/Specialized/S-Works-Shiv-Disc-Limited-Edition-Triathlon-Bike-2019/K8P9",
-    },
-    {
-      name: "BMC Timemachine 01 ONE",
-      src: "./images/bike-model-bmc-timemachine-01-one.jpg",
-      link: "https://www.sigmasports.com/item/BMC/Timemachine-01-One-Force-Disc-TT-Triathlon-Bike-2021/S835",
-    },
-    ,
-    {
-      name: "Cervelo P-Series",
-      src: "./images/bike-model-cervelo-p-series.jpg",
-      link: "https://www.sigmasports.com/item/Cervelo/P-Series-Ultegra-Di2-TT-Triathlon-Bike-2021/RM6Q",
-    },
-  ],
-};
+const initialBikeCards = [
+  {
+    trailType: "Шоссе",
+    bikes: [
+      {
+        name: "Cervelo Caledonia-5",
+        src: "./images/bike-model-cervelo-caledonia-5.jpg",
+        link: "https://www.sigmasports.com/item/Cervelo/Caledonia-5-Ultegra-Disc-Road-Bike-2021/RDEN",
+      },
+      {
+        name: "Cannondale Systemsix Himod",
+        src: "./images/bike-model-cannondale-systemsix-himod.jpg",
+        link: "https://www.sigmasports.com/item/Cannondale/SystemSix-HiMOD-Ultegra-Di2-Disc-Road-Bike-2021/R82J",
+      },
+      ,
+      {
+        name: "Trek Domane SL-7",
+        src: "./images/bike-model-trek-domane-sl-7.jpg",
+        link: "https://www.sigmasports.com/item/Trek/Domane-SL-7-Force-eTap-AXS-Disc-Road-Bike-2021/RULF",
+      },
+    ],
+  },
+  {
+    trailType: "Грэвел",
+    bikes: [
+      {
+        name: "Cervelo Aspero GRX 810",
+        src: "./images/bike-model-cervelo-aspero-grx-810.jpg",
+        link: "https://www.sigmasports.com/item/Cervelo/Aspero-GRX-810-1x-Disc-Gravel-Bike-2021/RJDE",
+      },
+      {
+        name: "Specialized S-Works Diverge",
+        src: "./images/bike-model-specialized-s-works-diverge.jpg",
+        link: "https://www.sigmasports.com/item/Specialized/S-Works-Diverge-Gravel-Bike-2020/NVJ9",
+      },
+      ,
+      {
+        name: "Cannondale Topstone Lefty 3",
+        src: "./images/bike-model-cannondale-topstone -lefty-3.jpg",
+        link: "https://www.sigmasports.com/item/Cannondale/Topstone-Carbon-Lefty-3-Disc-Gravel-Road-Bike-2021/PUC8",
+      },
+    ],
+  },
+  {
+    trailType: "TT",
+    bikes: [
+      {
+        name: "Specialized S-Works Shiv",
+        src: "./images/bike-model-specialized-s-works-shiv.jpg",
+        link: "https://www.sigmasports.com/item/Specialized/S-Works-Shiv-Disc-Limited-Edition-Triathlon-Bike-2019/K8P9",
+      },
+      {
+        name: "BMC Timemachine 01 ONE",
+        src: "./images/bike-model-bmc-timemachine-01-one.jpg",
+        link: "https://www.sigmasports.com/item/BMC/Timemachine-01-One-Force-Disc-TT-Triathlon-Bike-2021/S835",
+      },
+      ,
+      {
+        name: "Cervelo P-Series",
+        src: "./images/bike-model-cervelo-p-series.jpg",
+        link: "https://www.sigmasports.com/item/Cervelo/P-Series-Ultegra-Di2-TT-Triathlon-Bike-2021/RM6Q",
+      },
+    ],
+  },
+];
 
 // ** DOM-элементы
 // Блок 'Типы трасс'
@@ -82,6 +91,9 @@ const modalMenu = document.querySelector(".modal_type_menu");
 const modalMenuCloseBtn = modalMenu.querySelector(".modal__close");
 const modalMenuLinks = modalMenu.querySelectorAll(".modal__link");
 
+// Переключатели темной темы
+const themeSwitchs = document.querySelectorAll(".switch__input");
+
 // ** Слайдеры
 // Инициализация слайдера для блока 'Виды покрытий'
 const trailTypesSlider = new Swiper(".trail-types", {
@@ -99,6 +111,9 @@ const bikesSlider = new Swiper(".bikes__container", {
   observeParents: true,
 
   breakpoints: {
+    768: {
+      slidesPerView: 2,
+    },
     1200: {
       slidesPerView: 3,
       spaceBetween: 30,
@@ -126,13 +141,14 @@ function closeModal(modal) {
 
 // Функция инициализации селектора в блоке 'Велосипеды'
 function initBikesSelector(list, selector, initialData) {
-  for (let prop in initialData) {
+  initialData.forEach((element) => {
     const option = document.createElement("option");
     option.classList.add("bikes__selector-option");
-    option.value = prop;
-    option.textContent = prop;
+    option.value = element.trailType;
+    option.textContent = element.trailType;
     selector.append(option);
-  }
+  });
+
   // Обработчик изменения списка отображаемых карточек велосипедов в зависимости от выбранного
   // значения типа покрытия из выпадающего списка
   selector.addEventListener("change", (event) => {
@@ -144,17 +160,17 @@ function initBikesSelector(list, selector, initialData) {
 
 // Функция ициализации группы кнопок в блоке 'Велосипеды'
 function initBikesButtonGroup(list, buttonGroup, initialData) {
-  for (let prop in initialData) {
+  initialData.forEach((element) => {
     const input = document.createElement("input");
     const label = document.createElement("label");
     input.classList.add("bikes__input");
     label.classList.add("bikes__button");
     input.type = "radio";
-    input.id = prop;
+    input.id = element.trailType;
     input.name = "bikes-type";
-    input.value = prop;
-    label.htmlFor = prop;
-    label.textContent = prop;
+    input.value = element.trailType;
+    label.htmlFor = element.trailType;
+    label.textContent = element.trailType;
     // Обработчик изменения списка отбражаемых карточек велосипедов при нажатии на кнопку
     // выбора типа покрытия в группе кнопок
     input.addEventListener("click", (event) => {
@@ -162,7 +178,7 @@ function initBikesButtonGroup(list, buttonGroup, initialData) {
     });
     buttonGroup.append(input);
     buttonGroup.append(label);
-  }
+  });
   if (buttonGroup.firstChild !== null) {
     buttonGroup.firstChild.checked = true;
   }
@@ -184,12 +200,29 @@ function createBikesItem(name, src, link) {
   return bikesItem;
 }
 
+// Функци поиска списка велосипедов по типу трассы
+function getBikesListByTrailType(initialData, trailType) {
+  return initialData.find((element) => element.trailType === trailType).bikes;
+}
+
 // Функция инициализации списка велосипедов в блоке 'Велосипеды'
 function fillBikesList(list, initialData, trailType) {
   list.innerHTML = "";
-  initialData[trailType].forEach((bike) => {
+  const bikesList = getBikesListByTrailType(initialData, trailType);
+  bikesList.forEach((bike) => {
     list.append(createBikesItem(bike.name, bike.src, bike.link));
   });
+}
+
+// Функция переключения темы
+function switchTheme(event, otherSwitchs) {
+  if (event.target.checked) {
+    document.documentElement.classList.add("theme-dark");
+    otherSwitchs.forEach((element) => element.checked = true);
+  } else {
+    document.documentElement.classList.remove("theme-dark");
+    otherSwitchs.forEach((element) => element.checked = false);
+  }
 }
 
 // ** Обработчики действий пользователя
@@ -216,8 +249,12 @@ modalMenuCloseBtn.addEventListener("click", () => closeModal(modalMenu));
 modalMenuLinks.forEach((link) =>
   link.addEventListener("click", () => closeModal(modalMenu))
 );
+// Обработчик переключения темы
+themeSwitchs.forEach((element) => {
+  element.addEventListener("change", (event) => switchTheme(event, themeSwitchs));
+});
 
 // ** Начальная инициализация страницы
 initBikesSelector(bikesList, bikesSelector, initialBikeCards);
 initBikesButtonGroup(bikesList, bikesButtonGroup, initialBikeCards);
-fillBikesList(bikesList, initialBikeCards, Object.keys(initialBikeCards)[0]);
+fillBikesList(bikesList, initialBikeCards, initialBikeCards[0].trailType);

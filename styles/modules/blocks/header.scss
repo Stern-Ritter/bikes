@@ -5,23 +5,15 @@
   top: 0;
   left: 0;
   right: 0;
-  background-color: #f4f4f4;
+  background-color: var(--header-background);
   z-index: 100;
 
   &__container {
-    max-width: 284px;
-    margin: 0 auto;
-    padding-top: 30px;
+    padding-top: 28px;
     padding-bottom: 30px;
     @include flex($direction: row, $align: flex-start, $justify: flex-end);
 
-    @include tabletStyles {
-      max-width: 768px;
-    }
-
     @include desctopStyles {
-      max-width: 1200px;
-      padding-top: 28px;
       padding-bottom: 28px;
     }
   }
@@ -42,9 +34,6 @@
 
   &__menu-list {
     @include flex;
-    padding: 0;
-    margin: 0;
-    list-style: none;
   }
 
   &__menu-list-item {

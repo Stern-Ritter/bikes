@@ -7,13 +7,13 @@
 
   &_type {
     &_menu {
-      @include wh($w: 23px, $h: 23px);
+      @include wh($w: 22px, $h: 17px);
       background: repeating-linear-gradient(
         to bottom,
-        #151515,
-        #151515 3px,
-        transparent 3px,
-        transparent 10px
+        var(--buttons-color),
+        var(--buttons-color) 3px,
+        transparent 4px,
+        transparent 7px
       );
     }
 
@@ -23,24 +23,28 @@
           to bottom,
           transparent,
           transparent 10px,
-          #151515 10px,
-          #151515 13px
+          var(--buttons-color) 10px,
+          var(--buttons-color) 13px,
+          transparent 13px,
+          transparent 22px
         ),
         repeating-linear-gradient(
           to right,
           transparent,
           transparent 10px,
-          #151515 10px,
-          #151515 13px
+          var(--buttons-color) 10px,
+          var(--buttons-color) 13px,
+          transparent 13px,
+          transparent 22px
         );
       transform: rotate(45deg);
     }
 
     &_previous {
       @include wh($w: 24px, $h: 24px);
-      background-color: #ebebeb;
-      background-image: url(../images/previous-btn.svg);
-      background-size: 4.5px 10px;
+      background-color: var(--prev-next-btn-background);
+      background-image: var(--prev-btn-icon);
+      background-size: 6px 12px;
       background-position: center;
       background-repeat: no-repeat;
       border-radius: 30px;
@@ -53,9 +57,9 @@
 
     &_next {
       @include wh($w: 24px, $h: 24px);
-      background-color: #ebebeb;
-      background-image: url(../images/next-btn.svg);
-      background-size: 5px 10px;
+      background-color: var(--prev-next-btn-background);
+      background-image: var(--next-btn-icon);
+      background-size: 6px 12px;
       background-position: center;
       background-repeat: no-repeat;
       border-radius: 30px;

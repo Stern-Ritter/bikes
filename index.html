@@ -12,17 +12,16 @@
       href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="./styles/style.css" />
-    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
   </head>
   <body class="page">
     <header class="header">
-      <div class="header__container">
+      <div class="header__container container container_size_medium">
         <button
           type="button"
           class="header__menu-button button button_type_menu"
         ></button>
         <nav class="header__menu">
-          <ul class="header__menu-list">
+          <ul class="header__menu-list list">
             <li class="header__menu-list-item">
               <a href="#trail-types" class="header__link link"
                 >Покрытия и градиенты</a
@@ -40,7 +39,7 @@
     </header>
 
     <main class="content">
-      <section class="lead page__section">
+      <section class="lead container container_size_large page__section">
         <h1 class="lead__title headline">Шоссе, ТТ и&nbsp;Грэвел</h1>
         <div class="lead__image">
           <div class="lead__bike-pic"></div>
@@ -54,7 +53,7 @@
         <p class="lead__bike-pic-description text">Cannondale Systemsix</p>
       </section>
 
-      <section class="intro page__section">
+      <section class="intro container container_size_medium page__section">
         <img
           src="./images/mountain-highway-1.jpg"
           alt="Шоссе в горах"
@@ -72,7 +71,10 @@
         </p>
       </section>
 
-      <section id="trail-types" class="trail-types page__section">
+      <section
+        id="trail-types"
+        class="trail-types container container_size_large page__section"
+      >
         <div class="trail-types__buttons-group">
           <button
             type="button"
@@ -83,13 +85,14 @@
             class="trail-types__button button button_type_next"
           ></button>
         </div>
-        <ul class="trail-types__list swiper-wrapper">
+        <ul class="trail-types__list list swiper-wrapper">
           <li class="trail-types__list-item swiper-slide">
             <article class="trail-type">
               <h2 class="trail-type__title headline">Шоссе</h2>
               <ul
                 class="
                   trail-type__image-list trail-type__image-list_type_highway
+                  list
                 "
               >
                 <li class="trail-type__image-list-item">
@@ -121,6 +124,7 @@
               <ul
                 class="
                   trail-type__image-list trail-type__image-list_type_gravel
+                  list
                 "
               >
                 <li class="trail-type__image-list-item">
@@ -149,7 +153,12 @@
           <li class="trail-types__list-item swiper-slide">
             <article class="trail-type">
               <h2 class="trail-type__title headline">ТТ</h2>
-              <ul class="trail-type__image-list trail-type__image-list_type_tt">
+              <ul
+                class="
+                  trail-type__image-list trail-type__image-list_type_tt
+                  list
+                "
+              >
                 <li class="trail-type__image-list-item">
                   <img
                     src="./images/highway.jpg"
@@ -175,7 +184,10 @@
         </ul>
       </section>
 
-      <section id="bikes" class="bikes page__section">
+      <section
+        id="bikes"
+        class="bikes container container_size_medium page__section"
+      >
         <h2 class="bikes__title headline">Велосипеды</h2>
         <select
           class="bikes__selector text"
@@ -183,12 +195,12 @@
         ></select>
         <div class="bikes__button-group"></div>
         <div class="bikes__container">
-          <ul class="bikes__list swiper-wrapper"></ul>
+          <ul class="bikes__list list swiper-wrapper"></ul>
           <div class="swiper-pagination"></div>
         </div>
       </section>
 
-      <section id="training" class="training">
+      <section id="training" class="training container container_size_medium">
         <h2 class="training__title headline">Тренировки</h2>
         <img
           src="./images/forest-highway.jpg"
@@ -200,7 +212,7 @@
           Komoot, а&nbsp;записать эти тренировки поможет приложение Strava,
           а&nbsp;также это приложение позволит построить тренировочный план.
         </p>
-        <ul class="training__links">
+        <ul class="training__links list">
           <li class="training__links-item">
             <a
               class="training__link link"
@@ -221,46 +233,41 @@
       </section>
     </main>
 
-    <section class="subscription">
-      <div class="subscription__container">
-        <h3 class="subscription__title text">
-          Подпишитесь&nbsp;на рассылку &mdash;
-        </h3>
-        <form
-          name="user-subscription-form"
-          action="#"
-          method="post"
-          autocomplete="off"
-          class="subscription__form"
-        >
-          <input
-            class="subscription__input text"
-            type="email"
-            name="user-email"
-            placeholder="Ваш e-mail"
-          />
-          <input
-            class="subscription__accept-btn button text"
-            type="submit"
-            value="ok"
-            title="Подписаться"
-          />
-        </form>
-      </div>
-    </section>
-
     <footer class="footer">
-      <div class="footer__container">
-        <p class="footer__copyright text">&copy;&nbsp;Road Club 2021</p>
-        <img
-          src="./images/logo.svg"
-          alt="Логотип 'Road Club'"
-          class="footer__logo logo"
-        />
-        <label class="footer__switch switch">
-          <input type="checkbox" class="switch__input" />
-          <span class="switch__slider"></span>
-        </label>
+      <div class="footer__container container container_size_small">
+        <div class="subscription">
+          <h3 class="subscription__title text">
+            Подпишитесь&nbsp;на рассылку &mdash;
+          </h3>
+          <form
+            name="user-subscription-form"
+            action="#"
+            method="post"
+            autocomplete="off"
+            class="subscription__form"
+          >
+            <input
+              class="subscription__input text"
+              type="email"
+              name="user-email"
+              placeholder="Ваш e-mail"
+            />
+            <input
+              class="subscription__accept-btn button text"
+              type="submit"
+              value="ok"
+              title="Подписаться"
+            />
+          </form>
+        </div>
+        <div class="footer__row">
+          <p class="footer__copyright text">&copy;&nbsp;Road Club 2021</p>
+          <div class="footer__logo logo"></div>
+          <label class="footer__switch switch">
+            <input type="checkbox" class="switch__input" />
+            <span class="switch__slider"></span>
+          </label>
+        </div>
       </div>
     </footer>
 
@@ -272,7 +279,7 @@
           title="Закрыть"
         ></button>
         <nav class="modal__menu">
-          <ul class="modal__menu-list">
+          <ul class="modal__menu-list list">
             <li class="modal__menu-list-item">
               <a href="#trail-types" class="modal__link link" target="_top"
                 >Покрытия и градиенты</a
@@ -304,6 +311,7 @@
       </li>
     </template>
 
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="./index.js"></script>
   </body>
 </html>

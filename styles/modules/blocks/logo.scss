@@ -1,4 +1,9 @@
+@use "sass:map";
+
 .logo {
-  max-width: 38px;
-  object-fit: contain;
+  @include wh($w: 38px, $h: 38px);
+  background-image: var(--logo);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }

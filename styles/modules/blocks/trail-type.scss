@@ -25,9 +25,6 @@
   &__image-list {
     width: 100%;
     @include flex;
-    padding: 0;
-    margin: 0;
-    list-style: none;
     overflow: hidden;
     position: relative;
 

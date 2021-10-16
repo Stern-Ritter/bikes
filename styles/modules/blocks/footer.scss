@@ -1,33 +1,25 @@
 @use "sass:map";
 
 .footer {
-  padding-top: 40px;
+  padding-top: 60px;
   padding-bottom: 16px;
-  background-color: #efefef;
+  background-color: var(--footer-background);
 
   @include tabletStyles {
+    padding-top: 80px;
     padding-bottom: 60px;
   }
 
-  &__container {
-    max-width: 284px;
-    margin: 0 auto;
+  &__row {
+    padding-top: 100px;
     @include flex($direction: row, $align: center, $justify: space-between);
-
-    @include tabletStyles {
-      max-width: 580px;
-    }
-
-    @include desctopStyles {
-      max-width: 1200px;
-    }
   }
 
   &__copyright {
     font-weight: map.get($font-weights, "medium");
     font-size: 14px;
     line-height: 1.4;
-    color: #cfcfcf;
+    color: var(--copyright-color);
   }
 
   &__logo {

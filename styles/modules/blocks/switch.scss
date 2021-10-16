@@ -8,7 +8,7 @@
     top: -2px;
     left: -50px;
     @include wh($w: 28px, $h: 28px);
-    background-image: url("../images/sun.svg");
+    background-image: var(--switch-left-icon);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -20,7 +20,7 @@
     top: 2px;
     right: -42px;
     @include wh($w: 20px, $h: 20px);
-    background-image: url("../images/moon.svg");
+    background-image: var(--switch-right-icon);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -31,7 +31,7 @@
     @include wh($w: 0, $h: 0);
   }
 
-  &__input:checked + &__slider::before{
+  &__input:checked + &__slider::before {
     transform: translateX(20px);
   }
 
@@ -41,10 +41,10 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #fff;
+    background-color: var(--switch-background);
     border-radius: 9999px;
     cursor: pointer;
-    transition: .4s;
+    transition: 0.4s;
 
     &::before {
       content: "";
@@ -52,8 +52,8 @@
       @include wh($w: 20px, $h: 20px);
       top: 2px;
       left: 2px;
-      background-color: #24B47E;
-      box-shadow: 0px 0px 0px #fff;
+      background-color: var(--switch-slider-color);
+      box-shadow: 0px 0px 0px var(--switch-box-shadow);
       border-radius: 9999px;
     }
   }

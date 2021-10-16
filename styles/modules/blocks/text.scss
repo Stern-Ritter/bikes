@@ -3,11 +3,11 @@
 .text {
   font-family: "Inter", "Arial", sans-serif;
   font-style: normal;
-  color: #151515;
+  color: var(--text-color);
   margin: 0;
 
   &_muted {
-    color: #222222;
+    color: var(--main-text-color);
     opacity: 0.7;
   }
 

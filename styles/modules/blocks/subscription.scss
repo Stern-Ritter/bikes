@@ -1,27 +1,6 @@
 @use "sass:map";
 
 .subscription {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  background-color: #efefef;
-
-  @include tabletStyles {
-    padding-top: 80px;
-  }
-
-  &__container {
-    max-width: 284px;
-    margin: 0 auto;
-
-    @include tabletStyles {
-      max-width: 580px;
-    }
-
-    @include desctopStyles {
-      max-width: 1200px;
-    }
-  }
-
   &__title {
     max-width: 284px;
     margin-bottom: 40px;
@@ -43,7 +22,7 @@
     width: 100%;
     padding: 11px 20px;
     background-color: transparent;
-    border: 1px solid rgba(199, 199, 199, 0.5);
+    border: 1px solid var(--subscription-input-border);
     border-radius: 4px;
     outline: none;
     box-sizing: border-box;
@@ -54,12 +33,12 @@
   }
 
   &__input::placeholder {
-    color: #222222;
+    color: var(--subscription-input-placeholder-color);
     opacity: 0.7;
   }
 
   &__input:hover::placeholder {
-    color: #151515;
+    color: var(--subscription-input-placeholder-hover-color);
     opacity: 1;
   }
 
