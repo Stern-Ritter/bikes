@@ -1,0 +1,79 @@
+@use "sass:map";
+
+.intro {
+  padding-top: 20px;
+  padding-bottom: 80px;
+  display: grid;
+  justify-items: flex-start;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 40px 80px;
+
+  @include desctopStyles {
+    grid-template-rows: 1fr min-content;
+    grid-template-columns: 650px 470px;
+    grid-template-areas:
+      "image quote"
+      "image description";
+  }
+
+  &__image {
+    width: 100%;
+    max-width: 650px;
+    object-fit: contain;
+
+    @include desctopStyles {
+      grid-area: image;
+    }
+  }
+
+  &__quote {
+    max-width: 470px;
+    font-weight: map.get($font-weights, "semibold");
+    font-size: 23px;
+    line-height: 1.26;
+    letter-spacing: -0.5px;
+
+    @include tabletStyles {
+      font-size: 34px;
+      line-height: 1.29;
+    }
+
+    @include desctopStyles {
+      grid-area: quote;
+    }
+  }
+
+  &__quote-description {
+    margin: 0;
+    @include desctopStyles {
+      grid-area: description;
+    }
+  }
+
+  &__quote-author {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: map.get($font-weights, "medium");
+    font-size: 14px;
+    line-height: 1.57;
+
+    @include tabletStyles {
+      margin-bottom: 6px;
+      font-size: 20px;
+      line-height: 1.6;
+    }
+  }
+
+  &__quote-author-subline {
+    display: block;
+    font-weight: map.get($font-weights, "regular");
+    font-size: 10px;
+    line-height: 1.6;
+
+    @include tabletStyles {
+      font-size: 16px;
+      line-height: 1.75;
+    }
+  }
+}

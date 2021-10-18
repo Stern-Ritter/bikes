@@ -1,0 +1,73 @@
+.button {
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &_type {
+    &_menu {
+      @include wh($w: 22px, $h: 17px);
+      background: repeating-linear-gradient(
+        to bottom,
+        var(--buttons-color),
+        var(--buttons-color) 3px,
+        transparent 4px,
+        transparent 7px
+      );
+    }
+
+    &_close {
+      @include wh($w: 22px, $h: 22px);
+      background: repeating-linear-gradient(
+          to bottom,
+          transparent,
+          transparent 10px,
+          var(--buttons-color) 10px,
+          var(--buttons-color) 13px,
+          transparent 13px,
+          transparent 22px
+        ),
+        repeating-linear-gradient(
+          to right,
+          transparent,
+          transparent 10px,
+          var(--buttons-color) 10px,
+          var(--buttons-color) 13px,
+          transparent 13px,
+          transparent 22px
+        );
+      transform: rotate(45deg);
+    }
+
+    &_previous {
+      @include wh($w: 24px, $h: 24px);
+      background-color: var(--prev-next-btn-background);
+      background-image: var(--prev-btn-icon);
+      background-size: 6px 12px;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 30px;
+
+      @include tabletStyles {
+        @include wh($w: 50px, $h: 50px);
+        background-size: 9px 18px;
+      }
+    }
+
+    &_next {
+      @include wh($w: 24px, $h: 24px);
+      background-color: var(--prev-next-btn-background);
+      background-image: var(--next-btn-icon);
+      background-size: 6px 12px;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 30px;
+
+      @include tabletStyles {
+        @include wh($w: 50px, $h: 50px);
+        background-size: 9px 18px;
+      }
+    }
+  }
+}

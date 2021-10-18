@@ -1,0 +1,60 @@
+.switch {
+  position: relative;
+  @include wh($w: 44px, $h: 24px);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -50px;
+    @include wh($w: 28px, $h: 28px);
+    background-image: var(--switch-left-icon);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    right: -42px;
+    @include wh($w: 20px, $h: 20px);
+    background-image: var(--switch-right-icon);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &__input {
+    opacity: 0;
+    @include wh($w: 0, $h: 0);
+  }
+
+  &__input:checked + &__slider::before {
+    transform: translateX(20px);
+  }
+
+  &__slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--switch-background);
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: 0.4s;
+
+    &::before {
+      content: "";
+      position: absolute;
+      @include wh($w: 20px, $h: 20px);
+      top: 2px;
+      left: 2px;
+      background-color: var(--switch-slider-color);
+      box-shadow: 0px 0px 0px var(--switch-box-shadow);
+      border-radius: 9999px;
+    }
+  }
+}

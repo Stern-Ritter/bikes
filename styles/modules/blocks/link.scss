@@ -1,0 +1,47 @@
+@use "sass:map";
+
+.link {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  color: var(--links-color);
+  text-align: center;
+  text-decoration: none;
+
+  &_type {
+    &_learn-more {
+      background-color: var(--learn-more-btn-background);
+      color: var(--learn-more-btn-color);
+      font-weight: map.get($font-weights, "semibold");
+      font-size: 13px;
+      line-height: 1.46;
+      letter-spacing: 1px;
+      overflow: hidden;
+      z-index: 1;
+
+      @include tabletStyles {
+        font-size: 14px;
+        line-height: 1.29;
+      }
+    }
+    &_learn-more::before {
+      content: "";
+      @include wh($w: 100%, $h: 100%);
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      background-image: linear-gradient(
+        var(--learn-more-btn-hover-background),
+        var(--learn-more-btn-hover-background)
+      );
+      background-repeat: no-repeat;
+      background-size: 0% 100%;
+      z-index: -1;
+      transition: background-size 0.5s linear;
+    }
+
+    &_learn-more:hover::before {
+      background-size: 100% 100%;
+    }
+  }
+}

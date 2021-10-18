@@ -1,0 +1,45 @@
+.trail-types {
+  padding-top: 40px;
+  padding-bottom: 80px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+
+  @include tabletStyles {
+    padding-bottom: 180px;
+    padding-left: 64px;
+  }
+
+  @include desctopStyles {
+    padding-left: 120px;
+  }
+
+  &__buttons-group {
+    position: absolute;
+    top: 47px;
+    right: 0;
+    z-index: 50;
+
+    @include tabletStyles {
+      top: unset;
+      bottom: 74px;
+      left: 60px;
+    }
+
+    @include desctopStyles {
+      left: 120px;
+    }
+  }
+
+  &__button:first-child {
+    margin-right: 8px;
+
+    @include tabletStyles {
+      margin-right: 18px;
+    }
+  }
+
+  &__button:hover {
+    opacity: 0.6;
+  }
+}

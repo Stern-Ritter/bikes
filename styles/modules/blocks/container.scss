@@ -1,0 +1,33 @@
+.container {
+  max-width: 284px;
+  margin: 0 auto;
+
+  &_size {
+    &_small {
+      @include tabletStyles {
+        max-width: 580px;
+      }
+      @include desctopStyles {
+        max-width: 1200px;
+      }
+    }
+
+    &_medium {
+      @include tabletStyles {
+        max-width: 768px;
+      }
+      @include desctopStyles {
+        max-width: 1200px;
+      }
+    }
+
+    &_large {
+      @include tabletStyles {
+        max-width: 768px;
+      }
+      @include desctopStyles {
+        max-width: 1440px;
+      }
+    }
+  }
+}
